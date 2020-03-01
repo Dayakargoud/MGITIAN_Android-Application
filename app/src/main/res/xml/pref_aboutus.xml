@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference android:icon="@drawable/devloper" android:title="Developer" android:summary="DayakarGoud Bandari"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true" >
+
+    </Preference>
+    <Preference  app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        android:key="instagram"
+        android:icon="@drawable/instagram"
+        android:title="Instagram"
+        android:summary="dayakargoud_bandari"> </Preference>
+    <Preference app:allowDividerAbove="true" android:key="twitter"
+        app:allowDividerBelow="true" android:icon="@drawable/twitter" android:title="Twitter" android:summary="DayakargoudB"> </Preference>
+    <Preference app:allowDividerAbove="true"
+        app:allowDividerBelow="true"  android:key="linkedin" android:icon="@drawable/linkedin" android:title="LinkedIn" android:summary="https://www.linkedin.com/in/dayakar-goud-179849154"> </Preference>
+
+</PreferenceScreen>

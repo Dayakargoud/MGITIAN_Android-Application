@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".Activities.AddEventActivity"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/addEventtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        app:title="Add Event"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        />
+    <TextView
+        android:id="@+id/addevent_LoginTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:text="Please Login/SignUp to add Events"
+        android:layout_centerInParent="true"/>
+    <Button
+        android:id="@+id/event_login_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addevent_LoginTextView"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="20dp"
+        android:text="Login"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/button_background"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+        android:elevation="8dp"
+        />
+    <ScrollView
+        android:layout_below="@+id/addEventtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/addEvent_content_layout"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/addimage"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:padding="4dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/background_lines"
+                android:src="@drawable/add_icon_1"
+                android:scaleType="fitXY" />
+
+            <EditText
+                android:id="@+id/addtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addimage"
+                android:layout_margin="4dp"
+                android:drawableLeft="@drawable/ic_title_black_24dp"
+                android:drawablePadding="8dp"
+                android:hint="Title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:maxLines="2"
+                />
+
+
+            <EditText
+                android:id="@+id/addDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addtitle"
+                android:drawableLeft="@drawable/ic_description_black_24dp"
+                android:drawablePadding="8dp"
+                android:layout_margin="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:inputType="textMultiLine"
+                android:linksClickable="true"
+                android:hint="Description" />
+            <EditText
+                android:id="@+id/addContactinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addDescription"
+                android:layout_margin="10dp"
+                android:drawableLeft="@drawable/ic_contact_phone_black_24dp"
+                android:maxLines="4"
+                android:drawablePadding="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:hint="Contact info"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/eventDate"
+                android:drawableLeft="@drawable/ic_access_time_black_24dp"
+                android:drawablePadding="8dp"
+                android:layout_margin="10dp"
+                android:maxLines="2"
+                android:hint="Event Date and Timings"
+                android:inputType="text"
+                android:layout_below="@+id/addContactinfo"/>
+
+
+            <Spinner
+                android:id="@+id/spinner_branch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eventDate"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="8dp"
+                android:padding="8dp"
+                android:background="@drawable/background_lines_black"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:spinnerMode="dialog"
+                android:layout_marginBottom="16dp"
+                android:entries="@array/branch_clubs"> </Spinner>
+
+            <EditText
+                android:id="@+id/addRegistationFeeinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eventDate"
+                android:drawableStart="@drawable/rupp"
+                android:drawablePadding="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="8dp"
+                android:maxLines="4"
+                android:inputType="number"
+                android:hint="Registration Fee"
+                />
+            <EditText
+                android:id="@+id/addVenueinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addRegistationFeeinfo"
+                android:layout_margin="8dp"
+                android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                android:drawablePadding="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:maxLines="4"
+                android:hint="Venue"
+                />
+            <EditText
+                android:id="@+id/eventPostedby"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:drawablePadding="8dp"
+                android:hint="Posted by"
+                android:maxLines="2"
+                android:layout_below="@+id/addVenueinfo"
+                />
+            <Button
+                android:id="@+id/postButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eventPostedby"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:text="POST EVENT"
+                android:background="@drawable/button_background"
+                android:textStyle="bold"
+                android:padding="4dp"
+                android:textColor="#FFFFFF"
+                android:elevation="8dp"
+                />
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

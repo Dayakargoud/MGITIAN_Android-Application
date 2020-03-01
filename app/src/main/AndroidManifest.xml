@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dayakar.mgitian">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Activities.ProfileActivity"> </activity>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/appicon" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+
+        <activity
+            android:name=".Activities.CGPAActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.AddEventActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".Activities.EventBranchActivity" />
+        <activity android:name=".Activities.Event_Details_Activity" />
+        <activity android:name=".Activities.TransportActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.dayakar.mgitian.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+
+        <activity
+            android:name=".Activities.SuggestionsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".Activities.NotificationsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ExamsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activities.ImageActivity" />
+        <activity
+            android:name=".Activities.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SetUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activities.BunkManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.FacultyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Syllabus_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.DayDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Schedule_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.WinnouActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SplashScreenActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.MainActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".Firebase.EventNotifications"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

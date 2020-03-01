@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.DayDetailsActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/syllabus_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/syllabusViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/syllabus_toolbar">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/syllabusTablayout"
+            android:layout_width="match_parent"
+            app:tabMode="scrollable"
+            android:layout_height="wrap_content"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextAppearance="@style/MineCustomTabText">
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <TextView
+        android:id="@+id/syllabus_networkInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="No Internet Connection..!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:textStyle="bold" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/syllabus_networkInfo"
+        android:id="@+id/storage_button_syllabus"
+        android:text="Allow"
+        android:layout_margin="8dp"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        android:textAllCaps="false"
+        android:background="@drawable/button_background"
+        />
+</RelativeLayout>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.BunkManagerActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bunk_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="?android:attr/actionBarSize"
+    android:layout_height="match_parent">
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/progress_draw"
+        android:background="@drawable/shape"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_centerHorizontal="true"
+        android:max="100"
+        android:progress="0"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overall Attendance percentage"
+        android:id="@+id/overall_text"
+        android:layout_below="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+    <RelativeLayout
+        android:id="@+id/inner_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/overall_text"
+        android:layout_margin="2dp"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:id="@+id/attended_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="00"
+            android:layout_marginBottom="12dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_toLeftOf="@+id/view1"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="24dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Classes Attended"
+            android:layout_below="@+id/attended_num"
+            android:layout_toLeftOf="@+id/view1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+
+            />
+        <View
+            android:id="@+id/view1"
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"
+            />
+        <TextView
+            android:id="@+id/total_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="00"
+            android:layout_marginBottom="12dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_toRightOf="@+id/view1"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="24dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Classes"
+            android:layout_below="@+id/attended_num"
+            android:layout_toRightOf="@+id/view1"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="4dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/text_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:padding="1dp"
+        android:text="0.00%"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:inputType="numberDecimal"
+        android:id="@+id/attended_classes"
+        android:padding="16dp"
+        android:hint="Attended Classes"
+        android:textStyle="bold"
+        android:background="@drawable/setup_background"
+        android:layout_centerInParent="true"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_margin="4dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/total_classes"
+        android:layout_centerInParent="true"
+        android:hint="Total classes"
+        android:textStyle="bold"
+        android:inputType="numberDecimal"
+        android:background="@drawable/setup_background"
+        android:padding="16dp"
+        android:layout_below="@+id/attended_classes"
+
+        />
+    <TextView
+        android:id="@+id/req_text"
+        android:layout_below="@+id/total_classes"
+        android:layout_width="wrap_content"
+        android:text="Required percentage: "
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"
+        android:background="@drawable/setup_background"
+        android:padding="16dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/require_percentage"
+        android:layout_marginEnd="8dp"
+        android:layout_centerInParent="true"
+        android:layout_toEndOf="@+id/req_text"
+        android:text="75"
+        android:hint="Required percentage"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/total_classes"
+        android:background="@drawable/setup_background"
+        android:textStyle="bold"
+        android:padding="16dp"
+
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/status_card"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="8dp"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        android:layout_below="@+id/inner_relative_layout"
+        >
+        <RelativeLayout
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="Attendance Status"
+                android:textColor="@color/colorAccent"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="4dp"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+                />
+        <TextView
+            android:id="@+id/summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:visibility="visible"
+            android:layout_centerInParent="true"
+            android:textColor="@color/color_black"
+            android:layout_below="@+id/status"
+            android:text="You need to attend 0 classes "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+            />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/percatge_card"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="8dp"
+        android:focusableInTouchMode="true"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_below="@+id/status_card"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="2dp"
+            android:background="@drawable/background_lines"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/percatge_text0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="Attendance: "
+                android:textColor="@color/colorAccent"
+                android:layout_alignParentStart="true"
+                android:layout_margin="4dp"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+                />
+            <TextView
+                android:id="@+id/percatge_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="98.98"
+                android:textColor="@color/color_grey"
+                android:layout_toRightOf="@+id/percatge_text0"
+                android:layout_margin="4dp"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+                />
+            <TextView
+                android:id="@+id/percatge_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:visibility="visible"
+                android:textColor="@color/colorAccent"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/percatge_text0"
+                android:layout_alignParentStart="true"
+                android:text="classes: "
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+                />
+            <TextView
+                android:id="@+id/percatge_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="422/540"
+                android:textColor="@color/color_grey"
+                android:layout_toRightOf="@+id/percatge_text2"
+                android:layout_below="@+id/percatge_text0"
+                android:layout_margin="4dp"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attend"
+                android:id="@+id/btn_attnd"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bunk"
+                android:id="@+id/btn_bunk"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_below="@+id/btn_attnd"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background_red"
+                android:layout_alignParentEnd="true"
+
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_value"
+        android:id="@+id/calculate"
+        android:textAllCaps="false"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+         android:background="@drawable/button_background"
+
+        />
+</RelativeLayout>
+</RelativeLayout>

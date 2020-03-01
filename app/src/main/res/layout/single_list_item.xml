@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="16dp"
+
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/sub_name"
+        android:layout_margin="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="subject"
+        android:layout_alignParentTop="true"
+        />
+    <TextView
+        android:id="@+id/lecturer_name"
+        android:layout_margin="2dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lecturer"
+        android:layout_below="@+id/sub_name"
+        />
+    <View
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/color_grey"
+        android:layout_below="@+id/lecturer_name"
+        android:layout_margin="4dp"
+        >
+
+    </View>
+    <TextView
+        android:id="@+id/eventDetails_timings"
+        android:layout_margin="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/color_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="timings"
+        android:layout_below="@+id/view1"
+        android:drawableLeft="@drawable/ic_access_time_black_24dp"
+        android:drawablePadding="8dp"
+        />
+    <TextView
+        android:id="@+id/location"
+        android:layout_margin="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/color_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="locaion"
+        android:drawableLeft="@drawable/ic_location_on_black_24dp"
+        android:drawablePadding="8dp"
+        android:layout_below="@+id/view1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        />
+</RelativeLayout>
+</androidx.cardview.widget.CardView>

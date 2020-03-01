@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="4dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tvsbUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Units"
+            android:textColor="@color/color_grey"
+            android:textSize="24sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2sp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_below="@+id/tvsbUnit"
+            android:id="@+id/tvline"            />
+
+        <TextView
+            android:id="@+id/tvsybs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_below="@+id/tvline"
+            android:layout_marginLeft="2dp"
+            android:padding="2dp"
+            android:text="Timings" />
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

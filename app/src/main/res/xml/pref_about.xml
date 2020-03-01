@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference app:allowDividerAbove="true" android:key="appVersion"
+        app:allowDividerBelow="true" android:icon="@drawable/applogo" android:title="@string/app_name"
+        android:summary="@string/app_version" />
+
+    <Preference app:allowDividerAbove="true"
+        app:allowDividerBelow="true" android:icon="@drawable/user"  android:key="developer"
+        android:title="About Developer" android:summary="tap to know"/>
+
+    <Preference app:allowDividerAbove="true" app:allowDividerBelow="true"
+        android:icon="@drawable/app" android:title="Icons"
+        android:summary="Icons made by Freepik from www.flaticon.com" android:key="about">
+    </Preference>
+</PreferenceScreen>

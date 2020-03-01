@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/lecturer_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/faculty"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="4dp"
+            android:padding="8dp"
+            android:layout_alignParentStart="true"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="2dp"
+            android:layout_toEndOf="@+id/lecturer_icon"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/faculty_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="4dp"
+            android:text="Faculty Name"
+
+            />
+        <TextView
+            android:id="@+id/designation_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Designation"
+            android:layout_marginBottom="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            />
+
+        <TextView
+            android:id="@+id/qualification"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/color_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qualification"
+            android:layout_marginBottom="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"            />
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

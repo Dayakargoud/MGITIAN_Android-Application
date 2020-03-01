@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    app:cardCornerRadius="18dp"
+    app:cardUseCompatPadding="true"
+    android:elevation="2dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/viewPager_image"
+            android:layout_width="match_parent"
+            android:src="@drawable/website"
+            android:scaleType="fitXY"
+            android:layout_height="150dp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

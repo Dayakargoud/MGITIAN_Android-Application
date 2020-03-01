@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    tools:context=".Activities.NotificationsActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/notification_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notification_recyclerVew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notification_toolbar"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        tools:listitem="@layout/announcemets_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/notification_progressbar">
+
+    </ProgressBar>
+    <TextView
+        android:id="@+id/notification_networkInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="No Internet Connection..!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:textStyle="bold" />
+</RelativeLayout>

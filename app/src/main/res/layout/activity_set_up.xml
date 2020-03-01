@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SetUpActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/relativeLayout"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/selection_Info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            android:drawableRight="@drawable/ic_mode_edit_black_24dp"
+            android:drawablePadding="4dp"
+            android:textColor="@color/colorPrimary"
+            android:text="Quick Setup"
+            android:layout_margin="32dp"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:id="@+id/info_textView"
+            android:layout_width="wrap_content"
+            android:textColor="#E53935"
+            android:layout_height="wrap_content"
+            android:text="This information only used for showing related content like syllabus, timings and announcements etc."
+            android:layout_below="@+id/selection_Info"
+            android:visibility="invisible"
+            android:layout_marginStart="8dp"
+            android:textSize="12sp"
+            />
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="2dp"
+            android:layout_margin="4dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/info_textView"
+            android:background="@drawable/setup_background"
+
+            >
+            <TextView
+                android:id="@+id/college_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="College"
+                android:focusable="true"
+                android:padding="4dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_margin="16dp"
+                android:textColor="@color/colorAccent"
+                />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_college"
+                android:focusable="true"
+                android:padding="4dp"
+                android:layout_margin="16dp">
+            </Spinner>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="4dp"
+            android:id="@+id/linear2"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setup_background"
+            android:orientation="horizontal"
+            android:layout_below="@+id/linear1"
+
+            >
+        <TextView
+            android:id="@+id/branch_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Branch "
+            android:focusable="true"
+            android:padding="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_margin="16dp"
+            android:textColor="@color/colorAccent"
+            />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:padding="4dp"
+            android:id="@+id/spinner_Branch"
+            android:layout_margin="16dp">
+        </Spinner>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:visibility="invisible"
+            android:background="@drawable/setup_background"
+            android:orientation="horizontal"
+            android:layout_below="@+id/linear2"
+
+            >
+        <TextView
+            android:id="@+id/section_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Section"
+            android:focusable="true"
+            android:padding="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_margin="16dp"
+            android:textColor="@color/colorAccent"
+            />
+        <Spinner
+            android:id="@+id/spinner_subBranch"
+            android:layout_width="match_parent"
+            android:padding="4dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+        </Spinner>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:orientation="horizontal"
+            android:background="@drawable/setup_background"
+            android:layout_below="@+id/linear3"
+            android:visibility="invisible"
+
+            >
+        <TextView
+            android:id="@+id/year_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year     "
+            android:focusable="true"
+            android:padding="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_margin="16dp"
+            android:textColor="@color/colorAccent"
+            />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:id="@+id/spinner_Year"
+            android:layout_margin="16dp">
+        </Spinner>
+        </LinearLayout>
+
+        <ProgressBar
+            android:visibility="visible"
+                android:id="@+id/setUp_loading_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content">
+
+        </ProgressBar>
+        <LinearLayout
+            android:id="@+id/linear_network"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/setup_network_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="No Internet connection!"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_centerInParent="true">
+
+            </TextView>
+            <Button
+                android:id="@+id/setup_retry_button"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:text="Retry"
+                android:background="@drawable/button_background"
+                android:layout_margin="16dp">
+
+            </Button>
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            android:layout_margin="32dp"
+            android:textColor="#FFFFFF"
+            android:visibility="invisible"
+            android:enabled="false"
+            android:layout_below="@+id/linear4"
+            android:id="@+id/selection_add_data_button"
+            android:elevation="4dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_enable_disable_color"
+
+            />
+
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.HomeFragment">
+
+
+
+
+        <ImageView
+            android:id="@+id/college_image"
+            android:layout_width="match_parent"
+            android:layout_margin="0.5dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/clg"
+            android:contentDescription="pic by gourav"
+            />
+
+        <TextView
+            android:id="@+id/latest_textView"
+            android:layout_width="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimary"
+            android:text="Circulars"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_below="@+id/college_image"
+            android:layout_marginStart="8dp"
+
+            />
+        <TextView
+        android:id="@+id/latest_textValue"
+        android:layout_width="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#F43643"
+        android:text="Latest circulars will appeared here when you connected to internet"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/latest_textView"
+        android:layout_marginStart="8dp"
+        android:ellipsize="marquee"
+        android:scrollHorizontally="true"
+            android:singleLine="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"
+            android:marqueeRepeatLimit="marquee_forever"
+
+        />
+    <TextView
+        android:id="@+id/latest_textValue2"
+        android:layout_width="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#F43643"
+        android:text="Exam Time TablesCenter Allotment Information (B.Tech I to IV Year I Sem) Jan - 2020"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/latest_textValue"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="marquee"
+        android:scrollHorizontally="true"
+        android:focusable="true"
+        android:singleLine="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"
+        android:marqueeRepeatLimit="marquee_forever"
+
+        />
+
+    <TextView
+            android:id="@+id/daily_schedule"
+            android:layout_below="@+id/latest_textValue2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trending in Campus"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="2dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            />
+        <RelativeLayout
+            android:id="@+id/trending_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/daily_schedule"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trending_RecyeclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:layout_margin="1dp"
+                tools:itemCount="2"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/trendingreycliersingleitem"
+                android:orientation="horizontal">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <ProgressBar
+                android:id="@+id/trending_loading_progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="32dp"
+
+                />
+
+            <TextView
+                android:id="@+id/main_networkInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="No Internet Connection..!"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trending_relativeLayout"
+            android:layout_marginStart="8dp"
+            android:text="Categories"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/category_recyclerView"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_below="@+id/categories"
+            tools:listitem="@layout/category_item"
+            tools:orientation="horizontal"
+            android:fitsSystemWindows="true"
+            tools:itemCount="9"
+            app:spanCount="3"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+
+            />
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

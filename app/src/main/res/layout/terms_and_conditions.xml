@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/privacy"
+        android:layout_width="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="Privacy"
+        android:layout_margin="4dp"
+        android:padding="1dp"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/privacypolicy"
+        android:layout_below="@+id/privacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/privacy_policies"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/security"
+        android:layout_width="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="Security"
+        android:layout_margin="2dp"
+        android:layout_below="@+id/privacypolicy"
+        android:padding="1dp"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/security_details"
+        android:layout_below="@+id/security"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/privacy_policy_security"
+        android:layout_margin="8dp"/>
+    <TextView
+        android:id="@+id/security_updations"
+        android:layout_width="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="Changes to this Privacy policy"
+        android:layout_margin="2dp"
+        android:layout_below="@+id/security_details"
+        android:padding="1dp"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/security_update_details"
+        android:layout_below="@+id/security_updations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/privacy_policy_updations"
+        android:layout_margin="8dp"/>
+    <TextView
+        android:id="@+id/terms_title"
+        android:layout_width="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="Terms and Conditions"
+        android:layout_margin="2dp"
+        android:layout_below="@+id/security_update_details"
+        android:padding="1dp"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/terms_details"
+        android:layout_below="@+id/terms_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/privacyOne"
+        android:layout_margin="8dp"/>
+
+</RelativeLayout>
+</ScrollView>

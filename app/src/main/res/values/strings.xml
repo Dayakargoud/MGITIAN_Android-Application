@@ -1,0 +1,157 @@
+<resources>
+    <string name="app_name">MGITIAN</string>
+    <string name="button_value">Calculate</string>
+    <string name="mgitUrl">http://www.mgit.ac.in/index.html</string>
+    <string name="winnoutUrl">https://mgit.winnou.net/</string>
+    <string name="resultsJntuH">http://jntuhresults.in/</string>
+    <string name="academicCalendersPath">colleges/MGIT/academic_calenders</string>
+    <string name="syllabusPath">colleges/MGIT/All_Syllabus</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="app_tagline">One App serving all</string>
+
+    <string name="imageTransition">imageTransitions</string>
+    <string name="titleTransition">TitleTransitions</string>
+    <string name="descTransition">DescTransition</string>
+
+    <string name="title_activity_about">About</string>
+    <string name="app_version">current version 1.0.0</string>
+    <string name="pref_header_categories">Categories</string>
+    <string name="pref_header_about_us">About Us</string>
+    <string name="pref_about_us_key">aboutus</string>
+
+    <string-array name="branches">
+        <item>Select Branch</item>
+        <item>EEE</item>
+        <item>CSE</item>
+        <item>ECE</item>
+        <item>IT</item>
+        <item>MECH</item>
+        <item>MCT</item>
+        <item>CIVIL</item>
+        <item>Metallurgy</item>
+    </string-array>
+    <string-array name="branch_clubs">
+        <item>Select Branch/Club</item>
+        <item>EEE</item>
+        <item>CSE</item>
+        <item>ECE</item>
+        <item>IT</item>
+        <item>MECH</item>
+        <item>MCT</item>
+        <item>CIVIL</item>
+        <item>Metallurgy</item>
+        <item>LiteracyClub</item>
+        <item>MusicClub</item>
+        <item>ArtsClub</item>
+        <item>SportsClub</item>
+        <item>Photography</item>
+        <item>ISTE</item>
+        <item>CSI</item>
+        <item>NSS</item>
+        <item>StreetCause</item>
+    </string-array>
+    <string-array name="cgpa_grades">
+        <item>Select Grade</item>
+        <item>O</item>
+        <item>A+</item>
+        <item>A</item>
+        <item>B+</item>
+        <item>B</item>
+        <item>C</item>
+        <item>F</item>
+        <item>Ab</item>
+    </string-array>
+    <string-array name="years">
+        <item>Select</item>
+        <item>1-1</item>
+        <item>1-2</item>
+        <item>2-1</item>
+        <item>2-2</item>
+        <item>3-1</item>
+        <item>3-2</item>
+        <item>4-1</item>
+        <item>4-2</item>
+    </string-array>
+
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_about_app">About App</string>
+
+    <string name="pref_header_privacy_polcies">Privacy policy,Terms and Conditions </string>
+
+    <string name="notificcation_Channel_Name">RemainderNotification</string>
+    <string name="userinfoKey">userinfokey</string>
+    <string name="userPreference">userPreferences</string>
+    <string name="userBranch">userBranch</string>
+    <string name="userBranchKey">userBranchkey</string>
+
+    <!-- Branch event intro text -->
+    <string name="ECE">
+        MICROCOSM" (meaning a world in miniature) is the vibrant technical fest organized by the students of ECE in collaboration with IEEE, IETE and ISTE ,was started in the year 2006 with an aim of providing a wide platform for the student community to improve its technical skills and academic acumen.
+    </string>
+    <string name="EEE">
+        The Electrical and Electronics department stepped into MGIT in 2001-2002.
+        This branch has been training to gain knowledge about the design of electrical equipment, which play vital role in day-to-day life
+    </string>
+    <string name="MCT">
+
+        Technovation is going to land on the vicinity of MGIT this March.
+        So gear up your technical and creative stuff, start registering to enroll for the events, and
+        get ready to go abode this multi-faceted flight which takes you to the world of robotics,
+        robots playing soccer, climbing steps and racing on water, goods out of junk, fights with pocket flights and much more.
+        You will get a respite from this engineering stuff with refreshing events like collage work, potpourri and many more Go for it quickly, before it takes off!!!
+    </string>
+    <string name="MECH">
+
+        IGNITO is an event that is being conducted by the Department of Mechanical Engineering in the month of February.
+        It gives the students an opportunity to develop the core concepts and their technical skills.
+        it is a student organized fest in which many students come forward to conduct number of events like paper presentations,
+        quizzes, poster presentations, puzzle solving events, fun oriented activities which are related to the academics
+    </string>
+
+    <string name="METALLURGY">
+       Metallon-2K20 is the fest organised by the Department of Metallurgy and Material Engineering during 12-14th Mrach. Behalf of the fest ,there are many events being conducted both technical and non- technical events.
+The technical events may include such as Poster and Paper Presentation, Meta view etc.., which gives detail about the metallurgy subject.
+   </string>
+    <string name="CSE">
+
+        Qubit Is The Annual National Level Technical Symposium, Hosted By The Department Of Computer Science And Engineering Of The Prestigious Mahatma Gandhi Institute Of Technology .
+        Qubit 2019 Promises To Be A Pioneer In Its League And Is Engineered To Provide An Effective Interface Not Only Amongst The Students But Also Between The Students And The Corporate World. 10 Years Since Its Inception, Qubit Has Established Itself As Including Various Innovative Events Aimed At Projecting The Inherent Talents And Technical Panache Of The Participants.
+        Students From Across The Nation Compete To Be Declared The Best.For Qubit Is More Than Just An Idea, It Is A Revolution.
+    </string>
+    <string name="IT">
+        A National Level Technical Symposium, conducted by Department of Information Technology, MGIT.
+    </string>
+    <string name="CIVIL">
+        CINFRA-2020 A National Level Technical symposium organised by Civil Engineering Association(CEA), Dept. of Civil Engineering of MGIT
+    </string>
+    <string name="NSS">
+         National Service Scheme (NSS) is an Indian government-sponsored public service program conducted by the Ministry of Youth Affairs and Sports of the Government of India. The first education commission (1950) recommended the introduction of national service by students on a voluntary basis. NSS was launched during 1969, the birth centenary year of Mahatma Gandhi, in 37 universities involving 40000 students.
+         NSS is an extension dimension to the higher education system to orient the student youth to community service while they are studying in educational institutions.
+     </string>
+    <string name="CSI">
+        The CSI Chapter, MGIT with great erudition, spotlights the latest and imminent technology from across the globe.
+        TechAstra will enhance and enrich the updated technical knowledge required by industry and helps the students to interact with various IT industry leaders,
+        scientists and dedicated academicians.
+        We are committed to the advancement of research, development, training and education in the School of Computing under CSI and percolate benefits and knowledge.
+        The technical events, Ideathon and ProjectExpo are conducted.
+        The workshops on Cyber Security and Malware Analysis and Python are organised.
+    </string>
+    <string name="PhysioChemia">
+        PhysioChemia is the fest organised by the Physics and Chemistry department during 12-14th Mrach.
+    </string>
+    <string name="AimHigh">
+        AimHigh 2020 is the fest organised by the Department of Mathematics and Humanities during 12-14th Mrach.
+    </string>
+    <string name="MAGISTECH">
+        he Indian Society for Technical Education (ISTE) is a national, professional, non-profit technical Society.
+        The major objective of the ISTE is to assist and contribute in the production and development of top quality professional engineers and
+        technicians needed by the industries and other organizations.
+        The students chapter of ISTE at MGIT was established in 2003.
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

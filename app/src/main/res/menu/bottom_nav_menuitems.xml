@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/group" android:checkableBehavior="single">
+
+        <item android:id="@+id/Home" android:title="Home"
+            android:icon="@drawable/ic_home_black_24dp"
+            app:showAsAction="ifRoom">
+
+        </item>
+        <item android:id="@+id/eventsHome" android:title="Events"
+            android:icon="@drawable/ic_event_black_24dp"
+
+            app:showAsAction="ifRoom">
+
+        </item>
+        <item android:id="@+id/allevents" android:title="All Events"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+
+            app:showAsAction="ifRoom">
+
+        </item>
+        <item app:showAsAction="ifRoom"
+            android:id="@+id/messages"
+            android:icon="@drawable/ic_chat_black_24dp"
+            android:title="Messages"/>
+    </group>
+
+</menu>

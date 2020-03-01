@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Academicfragment">
+    <ImageView
+        android:id="@+id/networkImage_academic"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_above="@+id/networkTextAcademic"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:src="@drawable/ic_signal_cellular_connected_no_internet_0_bar_black_24dp"
+        android:layout_margin="16dp"/>
+    <TextView
+        android:id="@+id/networkTextAcademic"
+        android:layout_width="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="@color/color_black"
+        android:layout_centerInParent="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_height="wrap_content"/>
+    <ProgressBar
+        android:id="@+id/academic_progress"
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+    </ProgressBar>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saved_academic_recyclerview"
+        tools:listitem="@layout/file_layout_item"
+        android:layout_margin="4dp"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

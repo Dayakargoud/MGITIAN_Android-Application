@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<SwitchPreference android:icon="@drawable/notification"
+    android:key="notify" android:title="Notifications" android:defaultValue="true"
+    android:summary="Get remainder of daily schedule at 8:30 AM"> </SwitchPreference>
+</PreferenceScreen>

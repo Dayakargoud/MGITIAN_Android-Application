@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activities.ProfileActivity"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:elevation="0dp"
+        android:background="@drawable/gradient_back3"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/profile_collapsingToolarView"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:layout_width="match_parent"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:collapsedTitleGravity="start"
+            app:titleEnabled="true"
+            android:elevation="0dp"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            android:fitsSystemWindows="true">
+            <RelativeLayout
+                android:id="@+id/rela11"
+                android:layout_width="match_parent"
+                android:padding="4dp"
+                android:layout_marginTop="?android:attr/actionBarSize"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/user_profile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="8dp"
+                    />
+                <TextView
+                    android:id="@+id/profile_userEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profileImage"
+                    android:text="Username"
+                    android:textColor="@color/white"
+                    android:layout_margin="2dp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+                    />
+                <TextView
+                    android:id="@+id/profile_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_userEditText"
+                    android:text="xyz@gmail.com"
+                    android:layout_margin="2dp"
+                    android:textColor="@color/color_black"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/profile_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="parallax"
+                app:title="@string/app_name"
+                android:minHeight="?android:attr/actionBarSize">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:fillViewport="true"
+        android:id="@+id/nested"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/relativeLaoutProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/profileViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/profileTablayout"
+            android:layout_width="match_parent"
+            app:tabMode="fixed"
+            android:layout_height="wrap_content"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Small">
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <TextView
+        android:id="@+id/profile_network_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No internet connection...!"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:textAlignment="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+        <Button
+            android:id="@+id/profile_login_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_network_info"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="20dp"
+            android:text="Login"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/button_background"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:visibility="visible"
+            android:elevation="8dp"
+            />
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

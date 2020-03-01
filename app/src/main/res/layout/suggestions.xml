@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/suggest_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_margin="8dp"
+        android:layout_below="@+id/suggest_toolbar"
+        android:text="Your opinion is important to us.This way we can improve our app and serve better.">
+    </TextView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_suggest"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/info_text"
+        android:layout_height="250dp"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="8dp"
+        app:cardElevation="4dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/background_lines"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/suggest_Edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:maxLines="10"
+                android:hint="Write your suggestions or any issue.">
+
+            </EditText>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/send_suggestions_button"
+        android:layout_width="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+       android:layout_below="@+id/cardview_suggest"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_background"
+        android:text="Send"
+        android:textAllCaps="false"
+
+        >
+
+    </Button>
+
+</RelativeLayout>

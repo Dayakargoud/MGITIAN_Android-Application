@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="12dp"
+    android:layout_margin="2dp"
+    app:cardUseCompatPadding="true"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/clubCardView"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/hoeizontal_Image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"/>
+
+
+       <TextView
+           android:id="@+id/horizontal_item_textView"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textAlignment="center"
+           android:text="Event Name"
+           android:layout_margin="4dp"
+           android:textAppearance="@style/TextAppearance.AppCompat.Small"
+           android:textStyle="bold"
+           android:textColor="@color/white"
+           android:layout_centerInParent="true"
+           />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

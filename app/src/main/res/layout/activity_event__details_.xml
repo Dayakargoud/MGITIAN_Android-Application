@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Event_Details_Activity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolarView"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:layout_width="match_parent"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:collapsedTitleGravity="start"
+            app:titleEnabled="true"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:contentScrim="@color/colorPrimaryDark"
+            android:fitsSystemWindows="true">
+
+            <ImageView
+                android:id="@+id/singlepostImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                app:layout_collapseMode="parallax"
+                android:saveEnabled="true"
+                android:background="@color/background"
+                android:transitionName="@string/imageTransition"
+
+                />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/singlepostToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_collapseMode="pin"
+                android:minHeight="?android:attr/actionBarSize">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/singlepostToolbar"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="8dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/singleposttitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="4dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="4dp"
+                        android:hint="Title"
+                        android:textStyle="bold"
+                        android:transitionName="@string/titleTransition" />
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/single_branch_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Department: "
+                android:layout_below="@+id/linear1"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:drawableLeft="@drawable/teamwork"
+                android:drawablePadding="8dp"
+                android:padding="4dp"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="16dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/single_branch_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear1"
+                android:hint="Not-Available"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_toRightOf="@+id/single_branch_text"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="8dp"
+                android:padding="4dp"
+                android:textStyle="bold"
+                android:textColor="@color/color_black"
+                android:textIsSelectable="true" />
+            <View
+                android:id="@+id/view21"
+                android:layout_width="match_parent"
+                android:background="@color/background"
+                android:layout_below="@+id/single_branch_text"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:id="@+id/eventDetails_timings"
+                android:drawableLeft="@drawable/timing_icondp"
+                android:drawablePadding="8dp"
+                android:padding="4dp"
+                android:text="Timings"
+                android:textColor="@color/color_black"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_below="@+id/view21"
+
+                />
+            <LinearLayout
+                android:id="@+id/linearlayout2"
+                android:layout_width="match_parent"
+                android:background="@drawable/desc_background"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/eventDetails_timings"
+                android:orientation="vertical"
+                android:elevation="2dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/singlepostdescabout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:drawablePadding="8dp"
+                    android:drawableLeft="@drawable/ic_event_note_black_24dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:text="About Event "
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:padding="4dp"
+                    />
+
+                <TextView
+                    android:id="@+id/singlepostDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:hint="Description"
+                    android:autoLink="web"
+                    android:textIsSelectable="true"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="@color/color_black"
+                    android:layout_marginBottom="16dp"
+                    android:padding="4dp" />
+            </LinearLayout>
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:background="@color/background"
+                android:layout_below="@+id/linearlayout2"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact-Info: "
+                android:layout_below="@+id/view2"
+                android:layout_marginStart="8dp"
+                android:drawableLeft="@drawable/contact"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+
+                android:drawablePadding="8dp"
+                android:padding="8dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/singlepostcontact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/info"
+                android:autoLink="phone"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:hint="N/A"
+                android:padding="4dp"
+                android:textColor="@color/color_black"
+                android:textIsSelectable="true" />
+            <View android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:background="@color/background"
+                android:layout_below="@+id/singlepostcontact"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/single_reg_fee_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registration Fee : "
+                android:layout_below="@+id/view3"
+                android:drawableLeft="@drawable/cash"
+                android:drawablePadding="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="1dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:padding="4dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/single_reg_fee_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view3"
+                android:hint="100 rs"
+                android:textColor="@color/color_black"
+                android:padding="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@+id/single_reg_fee_text"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_centerHorizontal="true"
+                android:textIsSelectable="true" />
+            <View android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:background="@color/background"
+                android:layout_below="@+id/single_reg_fee_value"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/single_venue_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Venue : "
+                android:layout_below="@+id/view4"
+                android:layout_marginStart="16dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:drawableLeft="@drawable/placeholder"
+                android:padding="4dp"
+                android:textColor="@color/colorPrimary"
+                android:drawablePadding="8dp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                />
+
+            <TextView
+                android:id="@+id/single_venue_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/view4"
+                android:hint="N/A"
+                android:padding="4dp"
+                android:layout_marginStart="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginBottom="32dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/color_black"
+                android:layout_toRightOf="@+id/single_venue_text"
+                android:textIsSelectable="true" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

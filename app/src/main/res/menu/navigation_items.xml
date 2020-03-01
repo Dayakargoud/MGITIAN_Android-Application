@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/add_Event" android:title="Add event"
+            android:icon="@drawable/ic_add_circle_black_24dp"></item>
+        <item android:id="@+id/account" android:title="Account"
+            android:icon="@drawable/ic_account_circle_black_24dp"></item>
+        <item android:id="@+id/nav_settings" android:title="Preferences"
+        android:icon="@drawable/ic_settings_black_24dp"> </item>
+        <item android:id="@+id/nav_share" android:title="Share"
+            android:icon="@drawable/ic_share_black_24dp"> </item>
+        <item android:id="@+id/nav_feedback" android:title="Feedback"
+            android:icon="@drawable/ic_feedback_black_24dp"> </item>
+        <item android:title="Suggestions/Requests" android:id="@+id/suggestions"
+            android:icon="@drawable/ic_local_post_office_black_24dp"></item>
+        <item android:id="@+id/optout" android:title="Log out" android:icon="@drawable/logout"></item>
+        <item android:id="@+id/nav_about" android:title="About"
+            android:icon="@drawable/ic_info_black_24dp"> </item>
+
+    </group>
+
+</menu>
