@@ -1,5 +1,5 @@
 package com.dayakar.mgitian.Interfaces;
 
 public interface OnEventDeleteListener {
-    public void onEventDelete(String key);
+    void onEventDelete(String key);
 }

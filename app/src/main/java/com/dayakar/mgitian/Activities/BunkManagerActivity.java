@@ -134,11 +134,31 @@ public class BunkManagerActivity extends AppCompatActivity {
             float tc = total_classes;
             float result=0;
             float target_percentage = actualPercentage;
-            if(required_percent>=100){
-                if(actualPercentage<=required_percent){
-                    Toast.makeText(this, "You can't achive 100% or more in this semester because you already bunked "+(total_classes-attended_classes)+" classes", Toast.LENGTH_SHORT).show();
+            if(required_percent>100){
+                    summary.setText("You can't achive "+required_percent+"% in this semester");
+                    calculationCompleted(total_classes, attended_classes, actualPercentage);
+                return actualPercentage;
+
+            }
+            else if((target_percentage==required_percent)&&(required_percent==100)){
+                summary.setText("On Track,You can't miss the next class.");
+                calculationCompleted(total_classes, attended_classes, actualPercentage);
+                return actualPercentage;
+
+            }else if((target_percentage!=required_percent)&&(required_percent==100)){
+
+                while (target_percentage <=99.9) {
+                    ac++;
+                    tc++;
+                    target_percentage = (ac / tc) * 100;
+                   // System.out.println(target_percentage);
                 }
-                return 0;
+                result=ac-attended_classes;
+
+                summary.setText("You can't achive "+required_percent+"% in this semester but you can achieve "+99.9+"% by attending "+ String.format("%.2f", result)+ " classes.");
+                calculationCompleted(total_classes, attended_classes, actualPercentage);
+                return actualPercentage;
+
             }
 
             if(actualPercentage<required_percent){
@@ -146,7 +166,7 @@ public class BunkManagerActivity extends AppCompatActivity {
                         ac=(float) (ac+0.1);
                         tc= (float) (tc+0.1);
                         target_percentage = (ac / tc) * 100;
-                        System.out.println(target_percentage);
+                       // System.out.println(target_percentage);
                     }
                     result=ac-attended_classes;
                     calculationCompleted(total_classes, attended_classes, actualPercentage);
@@ -162,30 +182,16 @@ public class BunkManagerActivity extends AppCompatActivity {
 
                             tc=(float) (tc+0.1);
                             target_percentage = (ac / tc) * 100;
-                            System.out.println(target_percentage);
+                           // System.out.println(target_percentage);
 
                       }
                 //float req = ac - attended_classes;
                 result=total_classes-tc;
                 calculationCompleted(total_classes, attended_classes, actualPercentage);
-
                 }
+            showAttendanceInfo(result,required_percent);
 
-            if (result == 0) {
-                summary.setText("On Track,You can't miss the next class");
-            } else if (result> 0) {
-                float days=result/6;
-                summary.setText("You need to attend next " +  String.format("%.2f", result)+ " classes to get " +
-                        String.format("%.2f",required_percent)+" percentage"
-                +" i.e "+String.format("%.2f",days)+" working days."
 
-                );
-            } else {
-                float days=Math.abs(result)/6;
-                summary.setText("You may leave upto " + String.format("%.2f",Math.abs(result)) + " classes"
-                        +" i.e "+String.format("%.2f",days)+" working days."
-                );
-            }
         } catch (Exception e) {
             Toast.makeText(this, "Enter correct input", Toast.LENGTH_SHORT).show();
             return 0;
@@ -194,6 +200,23 @@ public class BunkManagerActivity extends AppCompatActivity {
        return actualPercentage;
 
 
+    }
+    private void showAttendanceInfo(float result,float required_percent){
+        if (result == 0) {
+            summary.setText("On Track,You can't miss the next class.");
+        } else if (result> 0) {
+            float days=result/6;
+            summary.setText("You need to attend next " +  String.format("%.2f", result)+ " classes to get " +
+                    String.format("%.2f",required_percent)+" percentage"
+                    +" i.e "+String.format("%.2f",days)+" working days."
+
+            );
+        } else {
+            float days=Math.abs(result)/6;
+            summary.setText("You may leave upto " + String.format("%.2f",Math.abs(result)) + " classes"
+                    +" i.e "+String.format("%.2f",days)+" working days."
+            );
+        }
     }
 
     private   void calculationCompleted(float total_classes,float attended_classes,float perct){
@@ -254,5 +277,3 @@ public class BunkManagerActivity extends AppCompatActivity {
 
 
     }
-
-

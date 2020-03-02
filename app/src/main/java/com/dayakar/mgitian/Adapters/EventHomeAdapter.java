@@ -74,8 +74,6 @@ public class EventHomeAdapter extends RecyclerView.Adapter<EventHomeAdapter.Home
                 public void onClick(View v) {
                     String itmText=items.get(getAdapterPosition());
                     final Intent intent=new Intent(mContext, EventBranchActivity.class);
-
-
                     int positon=getAdapterPosition();
                     switch (positon){
                         case 0:{
@@ -123,7 +121,6 @@ public class EventHomeAdapter extends RecyclerView.Adapter<EventHomeAdapter.Home
                             intent.putExtra("activity_title",itmText);
                             break;
                         }
-
                         case 9:{
                             intent.putExtra("branch","AimHigh");
                             intent.putExtra("activity_title",itmText);

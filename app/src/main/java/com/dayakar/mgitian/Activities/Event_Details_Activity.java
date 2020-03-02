@@ -13,8 +13,10 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.text.format.DateUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -63,6 +65,9 @@ public class Event_Details_Activity extends AppCompatActivity {
 
         user= FirebaseAuth.getInstance().getCurrentUser();
         setUpUIviews();
+        StrictMode.VmPolicy.Builder builder=new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
+        builder.detectFileUriExposure();
 
         Intent intent = getIntent();
         if(intent!=null) {
@@ -71,7 +76,6 @@ public class Event_Details_Activity extends AppCompatActivity {
 
         }
     }
-
 
     private void setUpUIviews(){
         mToolbar= findViewById(R.id.singlepostToolbar);
@@ -145,7 +149,10 @@ public class Event_Details_Activity extends AppCompatActivity {
                 break;
             }
             case R.id.share_single_Event:{
-                sharePost(titleValue);
+                try{
+                sharePost(titleValue);}catch (Exception e){
+                    Toast.makeText(this, "Unable share, please try again later", Toast.LENGTH_SHORT).show();
+                }
                 break;
             }
             case R.id.favourite_Event:{
@@ -247,7 +254,7 @@ public class Event_Details_Activity extends AppCompatActivity {
     }
     private void sharePost(String posttitle){
 
-        String body="Hey check out this "+posttitle+" an interesting Event from our college at  MGITIAN app \n"+
+        String body="Hey check out this "+posttitle+" an interesting Event from our college for more details about the event download  MGITIAN app \n"+
                 "https://play.google.com/store/apps/details?id="+getPackageName();
 
         String mimeType="text/plain";

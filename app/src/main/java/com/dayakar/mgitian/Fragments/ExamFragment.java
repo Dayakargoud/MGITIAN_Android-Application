@@ -303,7 +303,7 @@ public class ExamFragment extends Fragment implements OnDownloadListener {
                 long reference = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
                 if (downloadID == reference) {
                     // Do something with downloaded file.
-                    Toast.makeText(context, "download completed click open file", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "download completed click to open file", Toast.LENGTH_SHORT).show();
                     if(adapter.getItemCount()!=0){
                         adapter.notifyDataSetChanged();
                     }
@@ -367,7 +367,7 @@ public class ExamFragment extends Fragment implements OnDownloadListener {
     }
     private void shareItem(String path){
         File outputFile = new File(path);
-        Uri uri = FileProvider.getUriForFile(getContext(), "com.dayakar.classroom.provider",outputFile);
+        Uri uri = FileProvider.getUriForFile(getContext(), "com.dayakar.mgitian.provider",outputFile);
         Intent share = new Intent();
         share.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         share.setAction(Intent.ACTION_SEND);
@@ -375,7 +375,6 @@ public class ExamFragment extends Fragment implements OnDownloadListener {
         share.putExtra(Intent.EXTRA_STREAM, uri);
         getContext().startActivity(share);
     }
-
 
 
 

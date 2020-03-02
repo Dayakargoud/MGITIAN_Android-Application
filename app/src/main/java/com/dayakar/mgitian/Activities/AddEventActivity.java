@@ -179,38 +179,16 @@ public class AddEventActivity extends AppCompatActivity {
             venue.setError("Date is required");
             return;
         }
+        else if(TextUtils.isEmpty(event_postedBy)){
+            postedBy.setError("This field is required");
+            return;
+        }
 
         else {
 
                 String postId = UUID.randomUUID().toString();
                 Event upload = new Event(title_val, desc_val, null, cotact_val, reg_fee_val, venue_val, branch_val, postId,time_val,event_postedBy,System.currentTimeMillis());
                 post_event(upload);
-
-//                filepath.putFile(imageUri)
-//
-//                        .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//                            @Override
-//                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//                                mProgress.dismiss();
-//                                     filepath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-//                                         @Override
-//                                         public void onSuccess(Uri uri) {
-//                                             String postId = UUID.randomUUID().toString();
-//                                             Event upload = new Event(title_val, desc_val, uri.toString(), cotact_val, reg_fee_val, venue_val, branch_val, postId,time_val);
-//                                             mDatabaseReference.child(postId).setValue(upload);
-//
-//                                         }
-//                                     });
-//
-//                                Toast.makeText(AddEventActivity.this, "Event succesfully posted", Toast.LENGTH_SHORT).show();
-//
-//                                startActivity(new Intent(AddEventActivity.this, MainActivity.class));
-//                                finish();
-//
-//                            }
-//
-//                        }
-//                        );
 
             }
 

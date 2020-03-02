@@ -435,7 +435,7 @@ public class Academicfragment extends Fragment implements OnDownloadListener {
     }
     private void shareItem(String path){
         File outputFile = new File(path);
-        Uri uri = FileProvider.getUriForFile(getContext(), "com.dayakar.classroom.provider",outputFile);
+        Uri uri = FileProvider.getUriForFile(getContext(), "com.dayakar.mgitian.provider",outputFile);
         Intent share = new Intent();
         share.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         share.setAction(Intent.ACTION_SEND);

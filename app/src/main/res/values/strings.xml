@@ -41,6 +41,9 @@
         <item>MCT</item>
         <item>CIVIL</item>
         <item>Metallurgy</item>
+        <item>PhysioChemia</item>
+        <item>AimHigh</item>
+        <item>MAGISTECH</item>
         <item>LiteracyClub</item>
         <item>MusicClub</item>
         <item>ArtsClub</item>
@@ -139,10 +142,10 @@ The technical events may include such as Poster and Paper Presentation, Meta vie
         The workshops on Cyber Security and Malware Analysis and Python are organised.
     </string>
     <string name="PhysioChemia">
-        PhysioChemia is the fest organised by the Physics and Chemistry department during 12-14th Mrach.
+        PhysioChemia is the fest organised by the Physics and Chemistry department during 12-14th March.
     </string>
     <string name="AimHigh">
-        AimHigh 2020 is the fest organised by the Department of Mathematics and Humanities during 12-14th Mrach.
+        AimHigh 2020 is the fest organised by the Department of Mathematics and Humanities during 12-14th March.
     </string>
     <string name="MAGISTECH">
         he Indian Society for Technical Education (ISTE) is a national, professional, non-profit technical Society.

@@ -41,9 +41,8 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
         getSupportFragmentManager().beginTransaction().replace(R.id.setting_pref_container,new SettingsPrefFragment()).commit();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         prefs.registerOnSharedPreferenceChangeListener(this);
-       boolean remind= prefs.getBoolean("notify", false);
+       boolean remind= prefs.getBoolean("notify", true);
        if(remind){
-                  // dailyNotifications();
            registeringForFirebaseTopic();
        }else {
            unRegisteringForFirebaseTopic();
