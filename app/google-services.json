@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "1081832048994",
+    "firebase_url": "https://classroom-32e26.firebaseio.com",
+    "project_id": "classroom-32e26",
+    "storage_bucket": "classroom-32e26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081832048994:android:84f9aa40a57a0d58",
+        "android_client_info": {
+          "package_name": "com.dayakar.mgitian"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081832048994-1fp32nrk4nb1hcd70jopquga9f6ivtsr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dayakar.classroom",
+            "certificate_hash": "3ef2eea1dbade6d3e8c2abceb1ab4dcc5ac3f769"
+          }
+        },
+        {
+          "client_id": "1081832048994-gsge6d5opu3cudupgjiu9bf2u624k4cr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dayakar.classroom",
+            "certificate_hash": "e35f208b07201fcb9b23bc62c7377494aa531b4d"
+          }
+        },
+        {
+          "client_id": "1081832048994-kicheo0q4nt4fupck18b57gp4lft6tne.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCObrBSaU2C8PkuuW7NKd-S871b2RIusPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081832048994-kicheo0q4nt4fupck18b57gp4lft6tne.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

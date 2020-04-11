@@ -225,9 +225,6 @@ public class HomeFragment extends Fragment implements OnImageDownloadListener {
 
 
 
-
-
-
     @Override
     public void onImageLoad() {
         mProgressBar.setVisibility(View.INVISIBLE);

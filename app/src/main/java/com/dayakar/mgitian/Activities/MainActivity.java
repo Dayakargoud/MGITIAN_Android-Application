@@ -68,9 +68,7 @@ import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private TextView mTextVIew;
-    private RecyclerView category_RecyclerView,trending_RecyclerView;
-    private List<String> subjects=new ArrayList<String>();
+    private List<String> subjects = new ArrayList<>();
     private List<String> lecturers=new ArrayList<String>();
     private List<String> timings=new ArrayList<String>();
     private List<String> location=new ArrayList<String>();
@@ -84,8 +82,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private int databaseItems;
     private ProgressBar mProgressBar;
     private TextView categoryText,networkInfo;
-    private DatabaseReference mDatabaseReference,mDatabase_faculty_Reference,mSyllabusRef;
-    private LinearLayoutManager linearLayoutManager;
     private ArrayList<String> listEvent;
     private DatabaseReference mDatabase;
     private static final int STORAGE_PERMISSION_REQUEST_CODE = 214;
@@ -438,7 +434,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 item.setChecked(true);
                 startActivity(new Intent(MainActivity.this, AboutActivity.class));
                 mDrawerLayout.closeDrawer(GravityCompat.START);
-
                 return true;
 
             }
