@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView android:layout_height="fill_parent"
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="fill_parent"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:tag="EventHomefragment"
-        android:background="@color/white"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+        android:background="@color/white">
 
 
         <TextView
@@ -24,15 +24,19 @@
             android:layout_width="match_parent"
             android:id="@+id/trending_RelativeLayout"
             android:layout_height="wrap_content">
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPager"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:elevation="4dp"
-            android:focusableInTouchMode="true"
-            android:layout_margin="2dp"
 
-            />
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:elevation="4dp"
+                android:focusableInTouchMode="true"
+                android:visibility="visible" />
 
             <TextView
                 android:id="@+id/trending_TextView"

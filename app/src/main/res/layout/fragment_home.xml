@@ -11,8 +11,6 @@
     tools:context=".Fragments.HomeFragment">
 
 
-
-
         <ImageView
             android:id="@+id/college_image"
             android:layout_width="match_parent"
@@ -74,9 +72,14 @@
 
         />
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/trending_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/latest_textValue2"
+        android:layout_height="wrap_content">
+
+        <TextView
             android:id="@+id/daily_schedule"
-            android:layout_below="@+id/latest_textValue2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Trending in Campus"
@@ -85,18 +88,13 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="2dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            />
-        <RelativeLayout
-            android:id="@+id/trending_relativeLayout"
-            android:layout_width="match_parent"
-            android:layout_below="@+id/daily_schedule"
-            android:layout_height="wrap_content">
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/trending_RecyeclerView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fitsSystemWindows="true"
+                android:layout_below="@+id/daily_schedule"
                 android:layout_margin="1dp"
                 tools:itemCount="2"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
